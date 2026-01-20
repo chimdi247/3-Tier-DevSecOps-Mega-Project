@@ -93,7 +93,7 @@ pipeline {
         stage('K8-deploy') {
             steps {
                 script {
-                    withKubeConfig(caCertificate: '', clusterName: 'devopsshack-cluster', contextName: '', credentialsId: 'k8-token', namespace: 'dev', restrictKubeConfigAccess: false, serverUrl: 'https://042CDFB283295491DDF7A7A422346F3B.gr7.ap-south-1.eks.amazonaws.com') {
+                    withKubeConfig(caCertificate: '', clusterName: 'devopsshack-cluster', contextName: '', credentialsId: 'k8-token', namespace: 'dev', restrictKubeConfigAccess: false, serverUrl: 'https://5D69E0586CFF17B86727F3BC1462139E.yl4.eu-west-2.eks.amazonaws.com') {
                             sh 'kubectl apply -f k8s/sc.yaml -n dev'
                             sh 'kubectl apply -f k8s/mysql.yaml -n dev'
                             sh 'kubectl apply -f k8s/backend.yaml -n dev'
@@ -107,7 +107,7 @@ pipeline {
         stage('verify-K8-deploy') {
             steps {
                 script {
-                    withKubeConfig(caCertificate: '', clusterName: 'devopsshack-cluster', contextName: '', credentialsId: 'k8-token', namespace: 'dev', restrictKubeConfigAccess: false, serverUrl: 'https://042CDFB283295491DDF7A7A422346F3B.gr7.ap-south-1.eks.amazonaws.com') {
+                    withKubeConfig(caCertificate: '', clusterName: 'devopsshack-cluster', contextName: '', credentialsId: 'k8-token', namespace: 'dev', restrictKubeConfigAccess: false, serverUrl: 'https://5D69E0586CFF17B86727F3BC1462139E.yl4.eu-west-2.eks.amazonaws.com') {
                             sh 'kubectl get pods -n dev'
                             sh 'kubectl get svc -n dev'
                             
