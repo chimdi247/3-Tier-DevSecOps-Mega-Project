@@ -19,7 +19,7 @@ function Layout({ children }) {
       <AnimatedBanner message="Welcome to DevOps Shack 🚀" />
       <div className="app-body">
         <aside className="sidebar slide-in-left">
-          <h3>Connect</h3>
+          <h3>Connecting</h3>
           <ul className="social-links">
             <li><a className="sidebar-btn" href="https://www.linkedin.com/in/adityajaiswal7/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
             <li><a className="sidebar-btn" href="https://www.youtube.com/@devopsshack" target="_blank" rel="noopener noreferrer">YouTube</a></li>
