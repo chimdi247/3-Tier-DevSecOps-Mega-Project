@@ -16,7 +16,7 @@ services:
 
   backend:
     build: ./api
-    container_name: backend-api
+    container_name: backend
     environment:
       DB_HOST: mysql
       DB_USER: root
@@ -31,7 +31,7 @@ services:
 
   frontend:
     build: ./client
-    container_name: frontend-react
+    container_name: frontend
     ports:
       - "3000:80"
     depends_on:
